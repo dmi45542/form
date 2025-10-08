@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="form.css">
+  <title>Регистрация на курс (форма)</title>
 </head>
 <body>
-    <h1>form</h1>
+  <h1 class="header">Регистрация на курс</h1>
+  <section>
+  <form class="form">
+  <div class="form__group">
+    <label for="name" class="form__label">Имя</label>
+    <input 
+    type="text" 
+    id="name" 
+    class="form__input" 
+    placeholder="Введите Ваше имя"
+    required
+    minlength="4"
+    maxlength="25"
+    >
+    <span class="form_description">Минимум 3 символа</span>
+  </div>
+
+  <div class="form__group">
+    <label for="email" class="form__label">Email</label>
+    <input 
+    type="text" 
+    id="email" 
+    class="form__input" 
+    placeholder="Введите Ваш email"
+    required
+    minlength="7"
+    maxlength="100"
+    >
+    <span class="form_description">Введите действительный email</span>
+  </div>
+
+  <div class="form__group">
+    <label for="number" class="form__label">Телефон</label>
+    <input 
+    type="text" 
+    id="number" 
+    class="form__input" 
+    placeholder="Введите номер телефона."
+    required
+    minlength="8"
+    maxlength="10"
+    >
+    <span class="form_description">10 цифр, например, 12345678910</span>
+  </div>
+
+  <div class="form__group">
+    <label for="courses" class="form__label">Выберите курс</label>
+      <select 
+      id="courses" 
+      class="form__input" 
+      required
+      >
+      <option>Выберите курс</option>
+      <option>Фотография для начинающих</option>
+      <option>Продвинутый курс</option>
+      <option>Портретная фотография</option>
+    </select>
+    <span class="form_description">Выберите подходящий курс</span>
+  </div>
+
+  <div class="form__group">
+    <label for="message" class="form__label__area">Комментарий</label>
+    <textarea
+      id="message"
+      class="form__input"
+      placeholder="Расскажите о Вашем опыте в фотографии (опционально)"
+      rows="5"
+      maxlength="500">
+    </textarea>
+    <span class="form__description">Опционально, до 500 символов</span>
+  </div>
+
+    <button class="form_button" type="submit">Зарегистрироваться</button>
+
+  </form>
+  </section>
 </body>
 </html>
